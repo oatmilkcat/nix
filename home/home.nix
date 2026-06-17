@@ -1,9 +1,7 @@
 { config, pkgs, lib, ... }:
 
 {
-  programs.nushell = {
-    enable = true;
-  };
+  imports = builtins.map (e: ../modules/${e}) (builtins.attrNames (builtins.readDir ../modules));
 
   programs.git = {
     enable = true;
@@ -14,10 +12,11 @@
     };
   };
 
-  programs.starship.enable = true;
-
-  programs.carapace.enable = true;
-  programs.carapace.enableNushellIntegration = true;
-
   home.stateVersion = "24.11";
+
+  home.packages = with pkgs; [
+    # programming
+    rustup
+    nodejs_24
+  ];
 }

@@ -1,7 +1,7 @@
 { pkgs, ... }:
 
 {
-  system.primaryUser = "yourname";
+  system.primaryUser = "cat";
 
   # CLI tool
   environment.systemPackages = with pkgs; [
@@ -11,8 +11,7 @@
   # GUI apps (declarative Homebrew)
   homebrew = {
     enable = true;
-    onActivation.cleanup = "zap";
-    casks = [];
+    casks = [ "iterm2" "tailscale-app" ];
   };
 
   # macOS preferences
@@ -27,4 +26,6 @@
 
   system.stateVersion = 5;
   nixpkgs.hostPlatform = "aarch64-darwin";
+
+  services.tailscale.enable = true;
 }

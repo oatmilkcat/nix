@@ -1,5 +1,26 @@
 {
   "nodes": {
+    "cat-helix": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ],
+        "rust-overlay": "rust-overlay"
+      },
+      "locked": {
+        "lastModified": 1780683378,
+        "narHash": "sha256-MtzK2lk5LapriGWNvl580drNXXkMxuiCLHHWdBHisI0=",
+        "owner": "oatmilkcat",
+        "repo": "helix",
+        "rev": "0ed9c8357bebff7261cb6e3dbea538362e9b523d",
+        "type": "github"
+      },
+      "original": {
+        "owner": "oatmilkcat",
+        "repo": "helix",
+        "type": "github"
+      }
+    },
     "home-manager": {
       "inputs": {
         "nixpkgs": [
@@ -59,9 +80,31 @@
     },
     "root": {
       "inputs": {
+        "cat-helix": "cat-helix",
         "home-manager": "home-manager",
         "nix-darwin": "nix-darwin",
         "nixpkgs": "nixpkgs"
+      }
+    },
+    "rust-overlay": {
+      "inputs": {
+        "nixpkgs": [
+          "cat-helix",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1775358767,
+        "narHash": "sha256-f2eC+WIfhjevCPQILuV08i/kmKZzYZpUvkom/33VxCA=",
+        "owner": "oxalica",
+        "repo": "rust-overlay",
+        "rev": "20fd44bc663daa53a2575e01293e24e681d62244",
+        "type": "github"
+      },
+      "original": {
+        "owner": "oxalica",
+        "repo": "rust-overlay",
+        "type": "github"
       }
     }
   },
