@@ -18,5 +18,7 @@
     # programming
     rustup
     nodejs_24
+
+    yarn
   ];
 }
