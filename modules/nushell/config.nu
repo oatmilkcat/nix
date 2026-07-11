@@ -1,6 +1,6 @@
 use std/config *
 
-$env.PATH = ($env.PATH | split row (char esep) | append /nix/var/nix/profiles/default/bin | append /etc/profiles/per-user/cat/bin | append /run/current-system/sw/bin);
+$env.PATH = ($env.PATH | split row (char esep) | prepend /nix/var/nix/profiles/default/bin | prepend /etc/profiles/per-user/cat/bin | append /run/current-system/sw/bin);
 
 $env.config.show_banner = false
 $env.config.edit_mode = 'vi'
