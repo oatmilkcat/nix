@@ -8,10 +8,15 @@
     settings = {
       user.name = "Cat Lafayette";
       user.email = "cat@end.email";
+      user.signingkey = "2C7E3B2362C46679";
       push.autoSetupRemote = true;
       core.editor = "hx";
+      commit.gpgsign = true;
+      tag.gpgSign = true;
     };
   };
+
+  programs.gpg.enable = true;
 
   home.stateVersion = "24.11";
 
