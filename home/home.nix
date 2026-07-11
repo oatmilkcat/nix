@@ -16,6 +16,16 @@
     };
   };
 
+  programs.jujutsu = {
+    enable = true;
+    settings = {
+      user.name = "Cat Lafayette";
+      user.email = "cat@end.email";
+      ui.default-command = "log";
+      ui.editor = "hx";
+    };
+  };
+
   programs.gpg.enable = true;
 
   home.stateVersion = "24.11";
