@@ -8,16 +8,17 @@
         "rust-overlay": "rust-overlay"
       },
       "locked": {
-        "lastModified": 1780683378,
-        "narHash": "sha256-MtzK2lk5LapriGWNvl580drNXXkMxuiCLHHWdBHisI0=",
+        "lastModified": 1783763760,
+        "narHash": "sha256-YZURJKmZirzzKRcCU3+4r9rpm++LILl0dPz0MYf76qM=",
         "owner": "oatmilkcat",
         "repo": "helix",
-        "rev": "0ed9c8357bebff7261cb6e3dbea538362e9b523d",
+        "rev": "4b4a1796b23f220dba3b7a652082fb401d56aa1b",
         "type": "github"
       },
       "original": {
         "owner": "oatmilkcat",
         "repo": "helix",
+        "rev": "4b4a1796b23f220dba3b7a652082fb401d56aa1b",
         "type": "github"
       }
     },

@@ -9,6 +9,7 @@
       user.name = "Cat Lafayette";
       user.email = "cat@end.email";
       push.autoSetupRemote = true;
+      core.editor = "hx";
     };
   };
 
@@ -19,6 +20,13 @@
     rustup
     nodejs_24
 
+    # package managers
     yarn
+
+    # cli - environment management
+    direnv
+
+    # cli - database management
+    sqlx-cli
   ];
 }

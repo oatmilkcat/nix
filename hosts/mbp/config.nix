@@ -5,7 +5,7 @@
 
   # CLI tool
   environment.systemPackages = with pkgs; [
-    bat fzf delta lsd ripgrep tree
+    bat fzf delta lsd ripgrep tree htop
   ];
 
   # GUI apps (declarative Homebrew)
@@ -28,4 +28,8 @@
   nixpkgs.hostPlatform = "aarch64-darwin";
 
   services.tailscale.enable = true;
+
+  security.sudo.extraConfig = ''
+    Defaults pwfeedback
+  '';
 }

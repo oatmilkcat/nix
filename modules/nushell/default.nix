@@ -5,6 +5,9 @@
     shellAliases = {
       vi = "hx";
       vim = "hx";
+      z = "zellij";
+      sudo = ''sudo -p $"(ansi attr_dimmed)╰(ansi reset) (ansi purple)(ansi reset)  "'';
+      "," = "/usr/bin/open";
     };
 
     configFile.source = ./config.nu;

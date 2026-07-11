@@ -15,7 +15,7 @@
     };
 
     cat-helix = {
-      url = "github:oatmilkcat/helix";
+      url = "github:oatmilkcat/helix/4b4a1796b23f220dba3b7a652082fb401d56aa1b";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
