@@ -23,6 +23,12 @@
       user.email = "cat@end.email";
       ui.default-command = "log";
       ui.editor = "hx";
+
+      signing = {
+        behavior = "own";
+        backend = "gpg";
+        key = "2C7E3B2362C46679";
+      };
     };
   };
 
