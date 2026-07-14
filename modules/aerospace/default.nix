@@ -70,8 +70,6 @@
         alt-shift-f = "move-node-to-workspace F";
         alt-shift-g = "move-node-to-workspace G";
         alt-shift-i = "move-node-to-workspace I";
-        alt-shift-m = "move-node-to-workspace M";
-        alt-shift-n = "move-node-to-workspace N";
         alt-shift-o = "move-node-to-workspace O";
         alt-shift-p = "move-node-to-workspace P";
         alt-shift-q = "move-node-to-workspace Q";
@@ -88,6 +86,8 @@
         alt-shift-j = "move down";
         alt-shift-k = "move up";
         alt-shift-l = "move right";
+        alt-shift-n = "resize smart -100";
+        alt-shift-m = "resize smart +100";
       };
       on-window-detected = [
         {
