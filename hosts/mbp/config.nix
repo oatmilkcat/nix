@@ -19,6 +19,7 @@
     dock.autohide = true;
     finder.AppleShowAllFiles = true;
     NSGlobalDomain.KeyRepeat = 2;
+    menuExtraClock.Show24Hour = true;
   };
 
   # Determinate installer manages Nix itself
