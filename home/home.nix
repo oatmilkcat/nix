@@ -23,6 +23,7 @@
       user.email = "cat@end.email";
       ui.default-command = "log";
       ui.editor = "hx";
+      ui.pager = "delta";
 
       signing = {
         behavior = "own";
@@ -49,5 +50,7 @@
 
     # cli - database management
     sqlx-cli
+
+    delta
   ];
 }
