@@ -86,6 +86,7 @@
         alt-shift-j = "move down";
         alt-shift-k = "move up";
         alt-shift-l = "move right";
+        alt-shift-comma = "layout floating tiling";
         alt-shift-n = "resize smart -100";
         alt-shift-m = "resize smart +100";
       };
