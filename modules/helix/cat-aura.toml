@@ -1,5 +1,6 @@
 inherits = "aura-dark"
 
-"ui.statusline" = { bg = "black", separator = { fg = "#A08CA0" }, fg = "#AF8AFF" }
+"ui.statusline" = { bg = "black", fg = "#AF8AFF" }
+"ui.statusline.separator" = { fg = "#A08CA0" }
 
 "ui.gutter.selected" = { bg = "black" }

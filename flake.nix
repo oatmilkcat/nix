@@ -65,5 +65,14 @@
           }
         ];
       };
+
+      homeConfigurations."cat@dev-vm-cat" = home-manager.lib.homeManagerConfiguration {
+        pkgs = nixpkgs.legacyPackages.x86_64-linux;
+        extraSpecialArgs = { inherit inputs; };
+        modules = [
+          ./home/home.nix
+          ./hosts/dev-vm/home.nix
+        ];
+      };
     };
 }

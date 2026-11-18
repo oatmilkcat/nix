@@ -1,4 +1,4 @@
-{ config, pkgs, inputs, ... }: {
+{ config, pkgs, lib, inputs, ... }: lib.mkIf pkgs.stdenv.isDarwin {
   programs.aerospace = {
     enable = true;
 

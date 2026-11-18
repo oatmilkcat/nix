@@ -1,4 +1,4 @@
-{ config, pkgs, inputs, ... }: {
+{ config, pkgs, lib, inputs, ... }: {
   programs.nushell = {
     enable = true;
 
@@ -7,6 +7,7 @@
       vim = "hx";
       z = "zellij";
       sudo = ''sudo -p $"(ansi attr_dimmed)╰(ansi reset) (ansi purple)(ansi reset)  "'';
+    } // lib.optionalAttrs pkgs.stdenv.isDarwin {
       "," = "/usr/bin/open";
     };
 

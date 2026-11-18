@@ -13,6 +13,7 @@
         popup-border = "all";
         end-of-line-diagnostics = "hint";
         rounded-corners = true;
+        true-color = true;
 
         statusline = {
           left = ["file-name" "read-only-indicator" "file-modification-indicator"];
