@@ -2,6 +2,8 @@
 
 let
   mutagen = "${pkgs.mutagen}/bin/mutagen";
+  # The daemon dials SSH, and launchd/activation PATHs don't reliably include macOS's ssh
+  sshPath = "/usr/bin";
 in
 {
   home.packages = [ pkgs.mutagen ];
@@ -12,6 +14,7 @@ in
       ProgramArguments = [ mutagen "daemon" "run" ];
       RunAtLoad = true;
       KeepAlive = true;
+      EnvironmentVariables.MUTAGEN_SSH_PATH = sshPath;
     };
   };
 
@@ -32,7 +35,8 @@ in
             - .DS_Store
   '';
 
-  home.activation.mutagenSyncedSync = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
+  home.activation.mutagenSyncedSync = lib.hm.dag.entryAfter [ "writeBoundary" "setupLaunchAgents" ] ''
+    export MUTAGEN_SSH_PATH=${sshPath}
     if ! ${mutagen} sync list synced >/dev/null 2>&1; then
       run mkdir -p "${config.home.homeDirectory}/synced"
       run ${mutagen} sync create --name=synced \
