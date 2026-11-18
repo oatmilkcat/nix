@@ -9,6 +9,12 @@ simplified_ui true
 
 copy_on_select false
 
+default_layout "worktree"
+
+copy_command "pbcopy"
+
+pane_frame_style "full"
+
 ui {
     pane_frames {
         rounded_corners true
