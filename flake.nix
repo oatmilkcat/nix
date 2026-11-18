@@ -56,7 +56,7 @@
             home-manager.backupFileExtension = "backup";
             home-manager.extraSpecialArgs = { inherit inputs; };
             home-manager.users.cat = { imports =
-              [ ./home/home.nix ] ++
+              [ ./home/home.nix ./hosts/work/mutagen.nix ] ++
               (let overlayPath = /Users/cat/.config/nix-private/work-overlay.nix;
                in if builtins.pathExists overlayPath
                   then [ overlayPath ]
