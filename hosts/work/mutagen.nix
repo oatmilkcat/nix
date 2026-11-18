@@ -35,8 +35,11 @@ in
             - .DS_Store
   '';
 
+  # Any mutagen CLI call may auto-start the daemon with this script's environment,
+  # so ssh must be findable before the first one.
   home.activation.mutagenSyncedSync = lib.hm.dag.entryAfter [ "writeBoundary" "setupLaunchAgents" ] ''
     export MUTAGEN_SSH_PATH=${sshPath}
+    export PATH="$PATH:${sshPath}"
     if ! ${mutagen} sync list synced >/dev/null 2>&1; then
       run mkdir -p "${config.home.homeDirectory}/synced"
       run ${mutagen} sync create --name=synced \
